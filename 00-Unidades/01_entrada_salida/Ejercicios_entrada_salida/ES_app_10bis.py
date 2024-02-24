@@ -41,7 +41,17 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
+        sueldoS = self.txt_importe.get()
+        descuentoS = self.txt_descuento.get()
+
+        sueldoN=int(sueldoS)
+        descuentoN=int(descuentoS)
+
+        mas = sueldoN*descuentoN/100
+        sueldof = sueldoN - mas
+
+        sueldoFs = str(sueldof)
+        alert("Calculo", "El sueldo final es " + sueldoFs)
 
 
 if __name__ == "__main__":

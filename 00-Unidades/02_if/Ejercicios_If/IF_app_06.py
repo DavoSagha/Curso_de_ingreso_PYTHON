@@ -35,8 +35,12 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-
+        edadT = self.txt_edad.get()
+        edadN = float(edadT)
+        if(edadN >=18 ):alert("Es may", "Usted es mayor")
+        elif(13<= edadN <18):alert("Es adol", "Usted es adol")
+        elif(10<= edadN <=13):alert("Es pre", "Usted es preadol")
+        else:alert("Es pe", "Usted es pequeño")
         
         
     
